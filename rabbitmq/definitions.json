@@ -1,0 +1,59 @@
+{
+  "rabbit_version": "3.6.6",
+  "users": [
+    {
+      "name": "userpublisher",
+      "unhashedpass": "passpublisher",
+      "password_hash": "NGIoQYZA33lLfWt2bIruju1kMacF7ipKWFLeyiW37oy45Qp0",
+      "tags": ""
+    },
+    {
+      "name": "userconsumer",
+      "unhashedpass": "passconsumer",
+      "password_hash": "S1cYoOBGE6aUe3fYtKk7PaM+S2iuIt/SW4vHEM3dPqtl751a",
+      "tags": ""
+    },
+    {
+      "name": "adminuser",
+      "unhashedpass": "adminpass",
+      "password_hash": "PU71gFmTzCGlcl+Wi47TZqYDl51j/ZxK9QXdXhgn2ZMjJwyk",
+      "tags": "administrator"
+    }
+  ],
+  "vhosts": [
+    {
+      "name": "vhost1"
+    }
+  ],
+  "permissions": [
+    {
+      "user": "userpublisher",
+      "vhost": "vhost1",
+      "configure": "",
+      "write": ".*",
+      "read": ""
+    },
+    {
+      "user": "userconsumer",
+      "vhost": "vhost1",
+      "configure": "",
+      "write": "",
+      "read": ".*"
+    }
+  ],
+  "parameters": [],
+  "policies": [],
+  "queues": [
+    {
+      "name": "incoming_messages",
+      "vhost": "vhost1",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {
+        "x-queue-type": "classic"
+      }
+    }
+  ],
+  "exchanges": [],
+  "bindings": []
+ }
